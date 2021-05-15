@@ -1,7 +1,7 @@
 name: JetsMinions-Fixer
-author: Geik
+author: [Geik, aisnhappy]
 main: xyz.geik.minion.fixer.Main
-version: 1.0.0
+version: 1.0.1
 api-version: 1.13
 depend: [JetsMinions]
 softdepend: [ASkyBlock, SuperiorSkyblock]

@@ -17,6 +17,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.bgsoftware.superiorskyblock.api.SuperiorSkyblockAPI;
 import com.songoda.skyblock.api.SkyBlockAPI;
 import com.wasteofplastic.askyblock.ASkyBlockAPI;
+
+import me.jet315.minions.events.MinionBreakEvent;
 import me.jet315.minions.events.PreMinionPlaceEvent;
 
 public class Main
@@ -82,7 +84,7 @@ public class Main
 	
 	
 	/**
-	 * <b> Catch minion place event </b>
+	 * <b> Catch minion place event <b>
 	 * 
 	 * @EventHandler
 	 */
@@ -124,13 +126,49 @@ public class Main
 		
 	}
 	
+	/**
+	 * <b> Minio Break Event minion amount updater <b>
+	 * 
+	 * @EventHandler
+	 */
+	@EventHandler(priority = EventPriority.HIGHEST)
+	public void minionRemoveEvent(MinionBreakEvent e) {
+		
+		try
+		{
+			
+			UUID owner = getIslandOwner(e.getMinion().getMinion().getArmorStand().getLocation());
+			
+			if (getConfig().isSet("data." + owner.toString()))
+			{
+				
+				final int count = getConfig().getInt("data." + owner.toString()) - 1;
+				
+				if (count > 0)
+					getConfig().set("data." + owner.toString(), count-1);
+				
+				else return;
+				
+				saveConfig();
+				
+			}
+			
+			else if (!e.getPlayer().isOp())
+				e.setCancelled(true);
+			
+		}
+		
+		catch (NullPointerException e1) { return; }
+		
+	}
+	
 	
 	/**
 	 *  <b> 
 	 *  
 	 *  	UTILS
 	 *  
-	 *  </b>
+	 *  <b>
 	 */
 	
 	/**

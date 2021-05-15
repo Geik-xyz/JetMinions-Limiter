@@ -7,9 +7,9 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="D:/Dosyalarım/Minecraft/1) TEST/Test 1.8/spigot.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Geik/Desktop/JetsMinions-7.1.12.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Geik/git/Geik.xyz/Ciftci/libs/askyblock.jar"/>
 	<classpathentry kind="lib" path="D:/Dosyalarım/Minecraft/6) Paketler/1.8 Skyblock/plugins/SuperiorSkyblock2-1.6.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Geik/git/Geik.xyz/Ciftci/libs/FabledSkyblock-2.3.20_8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Geik/Desktop/JetsMinions-7.1.12.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
