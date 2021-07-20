@@ -1,4 +1,4 @@
-# JetMinions-Fixer
+# JetMinions-Limiter
 Features:
 - Limit minion amount on island
 - Remove limit which you stand on with **/miniongeik** 
